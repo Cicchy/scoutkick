@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scoutkick"
+version = "0.1.0"
+description = "EPA rating system for FIRST Tech Challenge (FTC)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+dependencies = [
+    "fastapi>=0.100,<0.102",
+    "uvicorn>=0.23,<0.24",
+    "numpy>=1.26,<2.0",
+    "scipy>=1.13,<2.0",
+    "scikit-learn>=1.3,<2.0",
+    "requests>=2.31,<3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/anomalyco/EPA-FTC"
+
+[project.scripts]
+scoutkick = "scoutkick.scout:main"
+scoutkick-api = "scoutkick.backend.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scoutkick*"]
