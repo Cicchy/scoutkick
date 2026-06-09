@@ -60,8 +60,8 @@ def predict_match(
 
     win_prob, red_pred, blue_pred = engine.predict_match(red_teams, blue_teams)
 
-    dims = ["total", "auto", "teleop", "endgame", "rp1", "rp2", "rp3",
-            "auto_classified", "teleop_classified", "teleop_depot"]
+    config = get_season_config(season)
+    dims = config.active_dimensions
     red_pred_dict = {dims[i]: float(red_pred[i]) for i in range(len(dims)) if i < len(red_pred)}
     blue_pred_dict = {dims[i]: float(blue_pred[i]) for i in range(len(dims)) if i < len(blue_pred)}
 

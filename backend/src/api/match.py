@@ -73,6 +73,7 @@ def get_match(
                     "epa_pre": m["epa_pre"],
                     "epa_post": m["epa_post"],
                     "win_prob": m["win_prob"],
+                    "is_elim": bool(m["is_elim"]),
                 })
                 break
 
@@ -83,6 +84,6 @@ def get_match(
         "event_code": event_code,
         "match_id": match_id,
         "season": season,
-        "is_elim": bool(teams[0].get("is_elim", 0)) if teams else False,
+        "is_elim": any(t.get("is_elim", False) for t in teams),
         "teams": teams,
     }

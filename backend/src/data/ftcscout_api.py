@@ -17,7 +17,8 @@ def _post_graphql(query: str, variables: Optional[dict] = None) -> Union[Any, bo
         payload["variables"] = variables
 
     try:
-        response = session.post(GRAPHQL_URL, json=payload, timeout=30)
+        timeout = int(os.environ.get("FTCSCOUT_TIMEOUT", "60"))
+        response = session.post(GRAPHQL_URL, json=payload, timeout=timeout)
         if response.status_code == 200:
             json_data = response.json()
             if "errors" in json_data:

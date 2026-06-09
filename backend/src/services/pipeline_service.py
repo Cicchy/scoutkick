@@ -179,7 +179,7 @@ class EPAPipeline:
                 )
 
                 tl = m.get("tournament_level")
-                is_elim = tl is not None and tl != "Quals"
+                is_elim = tl in ("Semis", "Finals")
 
                 for team_num, attrib in attributions.items():
                     self.engine.update_team(team_num, attrib, is_elim=is_elim)
