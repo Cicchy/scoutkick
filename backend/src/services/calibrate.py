@@ -3,9 +3,9 @@ from typing import List, Optional
 
 import numpy as np
 
-from scoutkick.backend.src.core.config import FTC_VECTOR_SIZE
-from scoutkick.backend.src.data.cleaner import BaseCleaner
-from scoutkick.backend.src.data.read_ftcscout import get_matches
+from backend.src.core.config import FTC_VECTOR_SIZE
+from backend.src.data.cleaner import BaseCleaner
+from backend.src.data.read_ftcscout import get_matches
 
 
 def calibrate_score_sd(

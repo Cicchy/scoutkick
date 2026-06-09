@@ -1,4 +1,4 @@
-from scoutkick.backend.src.services.pipeline_service import EPAPipeline
+from backend.src.services.pipeline_service import EPAPipeline
 
 if __name__ == "__main__":
     try:

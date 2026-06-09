@@ -1,7 +1,7 @@
 import unittest
 import numpy as np
-from scoutkick.backend.src.data.cleaner import CleanerRegistry
-from scoutkick.backend.src.core.config import FTC_VECTOR_SIZE
+from backend.src.data.cleaner import CleanerRegistry
+from backend.src.core.config import FTC_VECTOR_SIZE
 
 
 class TestCleanerBase(unittest.TestCase):

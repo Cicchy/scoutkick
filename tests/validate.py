@@ -2,9 +2,9 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import numpy as np
-from scoutkick.backend.src.data.cleaner import CleanerRegistry
-from scoutkick.backend.src.data.read_ftcscout import get_matches
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.data.cleaner import CleanerRegistry
+from backend.src.data.read_ftcscout import get_matches
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 DB_PATH = "cache/epa_data.db"
 

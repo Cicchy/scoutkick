@@ -7,10 +7,10 @@ Pulls match data from `api.ftcscout.org`, computes EPA ratings via an EWMA learn
 ## Quick Start
 
 ```bash
-# From repo root
+# Run from this directory (scoutkick/)
 $env:PYTHONPATH="."
-python scoutkick/backend/main.py          # Start API server (http://127.0.0.1:8000)
-python scoutkick/scout.py                 # Interactive CLI shell
+python backend/main.py          # Start API server (http://127.0.0.1:8000)
+python scout.py                 # Interactive CLI shell
 ```
 
 The first run of either command triggers the pipeline to fetch and process matches. Cached data is stored in `cache/epa_data.db`.

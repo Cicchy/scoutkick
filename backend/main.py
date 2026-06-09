@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from scoutkick.backend.src.api.router import api_router
+from backend.src.api.router import api_router
 
 app = FastAPI(title="scoutkick EPA API", version="0.1.0")
 app.include_router(api_router)

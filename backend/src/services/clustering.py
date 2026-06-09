@@ -2,7 +2,7 @@ from typing import List, Optional, Dict, Any
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import normalize
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 DIM_LABELS: Dict[str, List[str]] = {
     "2025": [

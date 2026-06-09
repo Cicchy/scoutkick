@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Dict, List, Any, Optional
 from abc import ABC
-from scoutkick.backend.src.core.config import FTC_VECTOR_SIZE
+from backend.src.core.config import FTC_VECTOR_SIZE
 
 
 class BaseCleaner(ABC):

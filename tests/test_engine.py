@@ -1,8 +1,8 @@
 import unittest
 import numpy as np
-from scoutkick.backend.src.core.config import get_season_config
-from scoutkick.backend.src.services.epa_service import EPAEngine
-from scoutkick.backend.src.data.cleaner import CleanerRegistry
+from backend.src.core.config import get_season_config
+from backend.src.services.epa_service import EPAEngine
+from backend.src.data.cleaner import CleanerRegistry
 
 
 class TestEPAEngineInit(unittest.TestCase):
@@ -166,19 +166,19 @@ class TestEPAMultipleSeasons(unittest.TestCase):
 
 class TestSkewNormal(unittest.TestCase):
     def test_update_follows_ewma(self):
-        from scoutkick.backend.src.core.math import SkewNormal
+        from backend.src.core.math import SkewNormal
         sn = SkewNormal(np.zeros(32), np.ones(32) * 100.0)
         sn.add_obs(np.full(32, 50.0), 1.0, 1.0)  # alpha=1, weight=1
         self.assertEqual(sn.mean[0], 50.0)
 
     def test_partial_update(self):
-        from scoutkick.backend.src.core.math import SkewNormal
+        from backend.src.core.math import SkewNormal
         sn = SkewNormal(np.zeros(32), np.ones(32) * 100.0)
         sn.add_obs(np.full(32, 50.0), 0.5, 1.0)  # alpha=0.5
         self.assertAlmostEqual(sn.mean[0], 25.0)
 
     def test_elim_weight_applied(self):
-        from scoutkick.backend.src.core.math import SkewNormal
+        from backend.src.core.math import SkewNormal
         sn = SkewNormal(np.zeros(32), np.ones(32) * 100.0)
         sn.add_obs(np.full(32, 50.0), 1.0, 0.33)  # weight=0.33
         self.assertAlmostEqual(sn.mean[0], 50.0 * 0.33)

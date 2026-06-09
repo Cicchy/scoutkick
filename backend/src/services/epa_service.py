@@ -1,7 +1,7 @@
 import numpy as np
 from typing import Dict, List, Tuple, Any, Optional
-from scoutkick.backend.src.core.math import SkewNormal, unit_sigmoid
-from scoutkick.backend.src.core.config import SeasonConfig
+from backend.src.core.math import SkewNormal, unit_sigmoid
+from backend.src.core.config import SeasonConfig
 
 class EPAEngine:
     def __init__(self, config: SeasonConfig):

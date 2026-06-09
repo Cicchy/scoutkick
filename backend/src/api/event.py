@@ -1,6 +1,6 @@
 from typing import Optional
 from fastapi import APIRouter, Query, HTTPException
-from scoutkick.backend.src.api.deps import get_storage
+from backend.src.api.deps import get_storage
 
 router = APIRouter(tags=["Event"])
 

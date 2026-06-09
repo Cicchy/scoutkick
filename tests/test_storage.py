@@ -2,7 +2,7 @@ import unittest
 import tempfile
 import os
 import numpy as np
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 
 class TestSQLiteStorage(unittest.TestCase):

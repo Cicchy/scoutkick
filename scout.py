@@ -3,8 +3,8 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import numpy as np
-from scoutkick.backend.src.services.pipeline_service import EPAPipeline
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.services.pipeline_service import EPAPipeline
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 DB_PATH = "cache/epa_data.db"
 
@@ -117,8 +117,8 @@ def main():
         print("No cached data found. Running pipeline (first time, this takes ~2min)...")
         storage, meta, engine = run_pipeline()
     else:
-        from scoutkick.backend.src.core.config import get_season_config
-        from scoutkick.backend.src.services.epa_service import EPAEngine
+        from backend.src.core.config import get_season_config
+        from backend.src.services.epa_service import EPAEngine
         config = get_season_config("2025")
         engine = EPAEngine(config=config)
         engine.score_sd = meta["score_sd"]

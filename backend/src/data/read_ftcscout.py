@@ -1,6 +1,6 @@
 from typing import Any, Dict, List
-from scoutkick.backend.src.data.ftcscout_api import get_ftcscout
-from scoutkick.backend.src.data.cleaner import BaseCleaner
+from backend.src.data.ftcscout_api import get_ftcscout
+from backend.src.data.cleaner import BaseCleaner
 
 
 def get_matches(cleaner: BaseCleaner, cache: bool = True) -> List[Dict[str, Any]]:

@@ -4,13 +4,13 @@ from typing import Dict, List, Optional, Set
 
 import numpy as np
 
-from scoutkick.backend.src.core.config import get_season_config
-from scoutkick.backend.src.data.read_ftcscout import get_matches
-from scoutkick.backend.src.data.cleaner import CleanerRegistry
-from scoutkick.backend.src.services.epa_service import EPAEngine
-from scoutkick.backend.src.services.calibrate import calibrate_score_sd, calibrate_component_means
-from scoutkick.backend.src.services.init_epa import get_init_epa, compute_norm_epa
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.core.config import get_season_config
+from backend.src.data.read_ftcscout import get_matches
+from backend.src.data.cleaner import CleanerRegistry
+from backend.src.services.epa_service import EPAEngine
+from backend.src.services.calibrate import calibrate_score_sd, calibrate_component_means
+from backend.src.services.init_epa import get_init_epa, compute_norm_epa
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 
 class EPAPipeline:

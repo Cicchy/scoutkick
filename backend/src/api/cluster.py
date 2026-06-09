@@ -1,9 +1,9 @@
 from typing import Optional, List
 from fastapi import APIRouter, Query, HTTPException
-from scoutkick.backend.src.api.deps import get_storage
-from scoutkick.backend.src.services.clustering import compute_clusters, get_team_cluster_detail, DEFAULT_N_CLUSTERS
-from scoutkick.backend.src.services.complementarity import complementarity_score, best_alliance_partners
-from scoutkick.backend.src.services.trajectory import (
+from backend.src.api.deps import get_storage
+from backend.src.services.clustering import compute_clusters, get_team_cluster_detail, DEFAULT_N_CLUSTERS
+from backend.src.services.complementarity import complementarity_score, best_alliance_partners
+from backend.src.services.trajectory import (
     compute_trajectory_clusters,
     get_team_trajectory,
 )

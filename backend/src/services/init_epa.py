@@ -3,8 +3,8 @@ from typing import Dict, Optional
 import numpy as np
 from scipy import stats
 
-from scoutkick.backend.src.core.config import SeasonConfig
-from scoutkick.backend.src.core.math import SkewNormal, inv_unit_sigmoid
+from backend.src.core.config import SeasonConfig
+from backend.src.core.math import SkewNormal, inv_unit_sigmoid
 
 NORM_MEAN = 1500.0
 NORM_SD = 250.0

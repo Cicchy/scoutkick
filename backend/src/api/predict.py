@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Query, HTTPException
-from scoutkick.backend.src.core.config import get_season_config
-from scoutkick.backend.src.services.epa_service import EPAEngine
-from scoutkick.backend.src.api.deps import get_storage
+from backend.src.core.config import get_season_config
+from backend.src.services.epa_service import EPAEngine
+from backend.src.api.deps import get_storage
 
 router = APIRouter(tags=["Predict"])
 

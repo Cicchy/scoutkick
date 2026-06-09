@@ -1,6 +1,6 @@
 import numpy as np
 from fastapi import APIRouter, HTTPException
-from scoutkick.backend.src.api.deps import get_storage
+from backend.src.api.deps import get_storage
 
 router = APIRouter(tags=["Season"])
 

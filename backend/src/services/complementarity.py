@@ -1,8 +1,8 @@
 from typing import List, Dict, Any, Optional, Tuple
 import numpy as np
 from sklearn.metrics.pairwise import cosine_distances
-from scoutkick.backend.src.services.clustering import DIM_LABELS
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.services.clustering import DIM_LABELS
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 
 def _get_playstyle_vec(

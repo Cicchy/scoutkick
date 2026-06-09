@@ -2,7 +2,7 @@ from typing import List, Dict, Any, Optional
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 MIN_MATCHES = 3
 DEFAULT_N_CLUSTERS = 4

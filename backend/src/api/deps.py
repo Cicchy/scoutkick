@@ -1,5 +1,5 @@
 import os
-from scoutkick.backend.src.storage.sqlite_storage import SQLiteStorage
+from backend.src.storage.sqlite_storage import SQLiteStorage
 
 _API_DIR = os.path.dirname(os.path.abspath(__file__))  # .../scoutkick/backend/src/api
 DB_PATH = os.path.join(_API_DIR, "..", "..", "..", "..", "cache", "epa_data.db")
